@@ -37,7 +37,8 @@ const MainHeader = styled.header`
   align-items: center;
   min-height: 7rem;
   .logo img {
-    width: 40rem;
+    width: 25rem;
+    height: 4rem;
   }
   nav ul li {
     font-size: 2rem;

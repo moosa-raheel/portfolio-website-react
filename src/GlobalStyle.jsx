@@ -12,12 +12,12 @@ export const GlobalStyle = createGlobalStyle`
 }
 h1{
     font-size : 6rem;
-    font-weigh : 900;
+    font-weight : 900;
     color : ${({ theme }) => theme.colors.heading};
 }
 h2{
     font-weight : 300;
-    white-spacing : normal;
+    white-space : normal;
     text-align : center;
     font-size : 4.4rem;
     color : ${({ theme }) => theme.colors.heading};
@@ -38,5 +38,10 @@ a{
 }
 li{
     list-style : none;
+}
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin:  0 auto;
 }
 `;
