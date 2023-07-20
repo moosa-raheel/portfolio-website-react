@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { Button } from "../styles/Button";
 import { Link } from "react-router-dom";
+import { AppContext } from "../context";
 export default function HeroSection({ head, image }) {
+  const name = useContext(AppContext);
   return (
     <Wrapper>
       <div className="container grid">
@@ -10,8 +12,8 @@ export default function HeroSection({ head, image }) {
           <p className="top-para">Hy It's me</p>
           <h1 className="hero-head">{head}</h1>
           <p className="hero-para">
-            I am a Full Stack Web Application Developer, Youtuber and Free
-            lancer
+            I am {name}.I am a Full Stack Web Application Developer, Youtuber
+            and Free lancer
           </p>
           <Button>
             <Link to="/contact">Hire Me</Link>
@@ -30,7 +32,7 @@ const Wrapper = styled.section`
   margin-top: 4em;
   div.grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 3em;
   }
   div.hero-img img {
